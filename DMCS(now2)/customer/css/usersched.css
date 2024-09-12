@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.user_content {
+    width: 100%;
+    position: relative;
+    height: 525px;
+}
+
+.schedule-tab {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75vh;
+}
+
+.sched_table {
+    background-color: #f0ffff;
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.formsched {
+    width: 500px;
+    height: 400px;
+}
+
+.feed-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.feed-form .col {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+    margin: 2px;
+    text-align: center;
+}
+
+.feed-form label {
+    font-size: 20px;
+    width: 25%;
+    font-weight: 600;
+}
+
+.feed-form input {
+    width: 65%;
+    height: 45px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #4B4B4B;
+    outline: none;
+}
+
+.feed-form select {
+    appearance: none;
+    width: 65%;
+    height: 45px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #4B4B4B;
+    outline: none;
+}
+
+.button_submit:hover,
+.feed-form input:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.feed-form .btn-submit {
+    padding: 0.5em 2em;
+    position: absolute;
+    bottom: -2rem;
+    right: 7%;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feed-form .btn-submit:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.feed-form .btn-submit:active {
+    transform: translate(0em, 0.2em);
+}
+
+.sched_table .tab-modal {
+    background-color: #fff;
+    width: 40%;
+    height: 60%;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    border-radius: 5px;
+    border: 1px solid;
+    z-index: 1;
+    display: none;
+}
+
+.tab-modal .tab-body{
+    margin: 10px;
+}
+
+.tab-modal .closebtn {
+    display: flex;
+    justify-content: end;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.tab-body .formdet{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.formdet .col2 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.formdet input {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    background: white;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #4B4B4B;
+}
+
+.button_submit:hover,
+.formdet input:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #212529;
+}
+
+@media screen and (max-width: 400px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        position: relative;
+    }
+    .sched_table {
+        display: none;
+    }
+    .user_content {
+        top: 2rem;
+    }
+    .formsched {
+        margin-top: 1rem;
+    }
+    .feed-form {
+        gap: 1rem;
+    }
+    #availMssg {
+    top: 3rem;
+    }
+}
+

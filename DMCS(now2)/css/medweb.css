@@ -1,0 +1,829 @@
+:root {
+    --color1: #09c065;
+    --shadow: #4b4b4b;
+    --bgrey: #fffc;
+    --textwhite: #f8f7f7;
+    --hovercolor: #0e7424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background: url(../imgs/bg.jpg) no-repeat;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--bgrey);
+}
+
+.navbar h3 {
+    padding: 10px 45px 10px 0;
+    box-shadow: 0px 1px 8px var(--shadow);
+    text-align: end;
+    color: var(--textwhite);
+    letter-spacing: 1px;
+    background-color: #12c95e;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    padding: 5px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.1rem;
+}
+
+.nav .fa-bell {
+    position: relative;
+    right: 30px;
+    background-color: #12c95e;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    padding: 10px;
+}
+
+.nav .fa-bell:hover{
+    color: #fff;
+}
+
+.nav .notifyball {
+    background-color: #be2a2a;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    color: #eeeaea;
+    text-align: center;
+}
+
+.nav img {
+    width: 70px;
+    margin-left: 40px;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 0 10px 0 auto;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav ul li span:hover {
+    transition: ease-in-out .3s;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+.nav ul li a:hover {
+    background-color: var(--hovercolor);
+    color: #fff;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+}
+.nav button {
+    border: none;
+    background-color: #12c95e;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.nav li button a {
+    text-decoration: none;
+    color: var(--textwhite);
+}
+
+.nav button:hover {
+    background-color: var(--hovercolor);
+    color: var(--textwhite);
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+} 
+
+.icon {
+    display: none;
+    font-size: 24px;
+}
+
+.usermodal {
+    background-color: #fff;
+    width: 112px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    right: 33%;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+
+.modalbody {
+    padding: 15px 10px 0 10px;
+}
+
+.modalbody a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+}
+
+.modalbody a:hover {
+    background-color: #0e7424;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.notifbell {
+    border: 1px solid #797979;
+    background-color: #fff;
+    width: 28%;
+    height: 150px;
+    position: absolute;
+    top: 112px;
+    right: 28px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    z-index: 1;
+    display: none;
+}
+
+.notifbody a {
+    background: #b5b5b51f;
+    font-size: 1rem;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+}
+
+.notifbody a::before{
+    content: '•';
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.notifbody a:hover{
+    text-decoration: underline;
+    color: #3882c7;
+}
+/* .notifbody {
+    padding: 15px 10px 0 10px;
+} */
+
+/* ============Content=========== */
+
+.container {
+    box-shadow: 1px 6px 10px rgb(49, 49, 49);
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        rgba(16, 32, 58, 0.39),
+        rgba(1, 11, 19, 0.767)
+        ),
+        url(https://w0.peakpx.com/wallpaper/30/824/HD-wallpaper-medical-top-medical-background-hospital.jpg);
+    background-size: cover;
+}
+
+.content {
+    padding: 220px 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #f8f7f7;
+}
+
+.content h4 {
+    margin-bottom: 15px;
+}
+
+.content .linya {
+    width: 25%;
+    margin: auto;
+    border: 3px solid #09c065;
+    border-radius: 5px;
+}
+
+.content button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #12c95e;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    padding: 12px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.content button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.content button span a {
+    text-decoration: none;
+    color: var(--textwhite);
+}
+
+.content button span:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.content button:hover span {
+    padding-right: 15px;
+}
+
+.content button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* =========== BG Modal ============== */
+
+#wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.bgmodal {
+    position: absolute;
+    top: 1100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f3f3f0;
+    border-radius: 15px 15px 0 0;
+    width: 90%;
+    box-shadow: 0px 0px 10px var(--shadow);
+}
+
+.bg-img img{
+    width:650px;
+    height:100%;
+}
+
+.bgmodal .title1 {
+    position: relative;
+    text-align: center;
+    margin: 60px 0 0 0;
+}
+
+.bgmodal .title1::after {
+    content: "";
+    border-bottom: 3px solid #09c065;
+    position: absolute;
+    border-radius: 5px;
+    width: 20%;
+    top: 50px;
+    left: 40%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 55px 0;
+    gap: 60px;
+}
+
+.card {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    cursor: pointer;
+    transition: all 120ms;
+    background: #1b4332;
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+    border-radius: 20px;
+}
+
+.card .title {
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+.card .title a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--textwhite);
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.row .card:hover {
+    box-shadow: 0px 0px 10px var(--shadow);
+}
+
+.image1 {
+    background: url(https://static.vecteezy.com/system/resources/thumbnails/000/661/970/small_2x/booking_schedule_isometric_illustration-02.jpg) center;
+    background-size: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.image2 {
+    background: url(https://static.vecteezy.com/system/resources/previews/002/302/910/original/people-enjoy-online-learning-courses-to-add-new-skills-illustration-suitable-for-landing-page-ui-website-mobile-app-editorial-poster-flyer-article-and-banner-vector.jpg) center;
+    background-size: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========AVAILABILITY============= */
+
+.availability {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    padding: 1px;
+}
+.sepline {
+    border: 2px solid #0e7424;
+    border-radius: 5px;
+    position: absolute;
+    width: 84%;
+    top: 20px;
+    left: 8%;
+}
+
+.availability .clinic-tab {
+    position: relative;
+}
+
+.cont-tab {
+    position: absolute;
+    left: 15%;
+    top: 70px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cont-tab h1 {
+    font-size: 1.5rem;
+}
+
+.cont-tab span {
+    font-size: 1.5rem;
+}
+
+.clinichrs {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cont-tab .clinic-title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.doc-icon {
+    position: absolute;
+    width: 300px;
+    right: 15%;
+    top: 35px;
+}
+
+.doc-icon img {
+    width: 100%;
+}
+
+/* ===============ABOUT============ */
+
+.other {
+    width: 100%;
+    background: linear-gradient(
+        rgba(16, 32, 58, 0.39),
+        rgba(1, 11, 19, 0.767)
+        ),
+        url(../imgs/Improving-patient-care-quality_Thumbnail.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+    box-shadow: 1px 1px 7px #4b4b4b;
+    color: var(--textwhite);
+    height: 85vh;
+}
+
+.other .title2 {
+    position: relative;
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+.other .title2::after {
+    content: "";
+    border-bottom: 3px solid #09c065;
+    position: absolute;
+    width: 20%;
+    top: 50px;
+    left: 40%;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 70px;
+}
+
+.content2 .text-content {
+    text-align: justify;
+    text-indent: 2rem;
+    line-height: 25px;
+}
+
+/* ============= FOOTER/SERVICES ============= */
+
+.footer .footertext {
+    position: relative;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.footer .footertext::after {
+    content: "";
+    border-bottom: 3px solid #09c065;
+    position: absolute;
+    width: 20%;
+    top: 90px;
+    left: 40%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0 30px 0;
+}
+
+.card5 {
+    width: 270px;
+    height: 350px;
+    background-image: url(../imgs/bg2.jpg);
+    background-size: cover;
+    background-position: left;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.card5:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #8f7eff, #44a4ff);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.card5:hover:before {
+    opacity: 0.5;
+}
+  
+.card5-content {
+    width: 200px;
+    height: 300px;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.card5-content span {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+  
+.card5:hover .card5-content:nth-child(1) {
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        rgba(16, 32, 58, 0.39),
+        rgba(1, 11, 19, 0.767)
+        ), url(https://static.vecteezy.com/system/resources/previews/002/127/134/original/medical-and-healthcare-concept-illustration-schedule-medical-check-up-flat-design-with-doctor-can-use-for-the-homepage-mobile-apps-character-cartoon-illustration-flat-style-free-vector.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fffc;
+}
+/* .card5:hover .card5-content:nth-child(2) {
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        rgba(16, 32, 58, 0.39),
+        rgba(1, 11, 19, 0.767)
+        ), url(https://img.freepik.com/free-vector/hand-drawn-patient-taking-medical-examination_23-2148837416.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fffc;
+}
+.card5:hover .card5-content:nth-child(3) {
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        rgba(16, 32, 58, 0.39),
+        rgba(1, 11, 19, 0.767)
+        ), url(https://static.vecteezy.com/system/resources/previews/004/578/683/original/a-patient-consults-a-doctor-and-nurse-free-vector.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fffc;
+} */
+  
+  /* ======END CONTENT======= */
+
+.footer_last{
+    margin-top: 30px;
+    padding: 20px 0 15px 0;
+    background-color: #0e7424;
+}
+
+.lastcontent {
+    color: #eeeaea;
+    text-align: center;
+}
+
+
+
+/* ==========RESPONSIVE============== */
+
+/* @media screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        position: relative;
+    }
+    .content h1 {
+        padding: 0 10px 0 10px;
+    }
+    .bgmodal {
+        top: 1100px;
+        left: 50%;
+        transform: translate(-50%, -46%);
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        background-color: #09c065;
+        top: 75px;
+        padding: 16px 0;
+        width: 100%;
+        z-index: 1;
+    }
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+    .icon {
+        margin-right: 30px;
+        display: block;
+        cursor: pointer;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        background-color: aliceblue;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px 10px 20px;
+    }
+    .nav ul li a {
+        padding: 10px;
+        text-align: center;
+        font-weight: 600;
+        width: 30%;
+    }
+    .nav ul li a:hover {
+        background-color: #0e7424;
+        color: var(--textwhite);
+        border-radius: 5px;
+    }
+    .content2 {
+        flex-direction: column-reverse;
+        padding: 0px 30px 30px 30px;
+    }
+} */
+
+
+@media screen and (max-width: 400px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        background-color: #09c065;
+        top: 75px;
+        padding: 16px 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+
+    .icon {
+        margin-right: 30px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        background-color: aliceblue;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .usermodal {
+        top: 17rem;
+        right: 10%;
+    }
+
+    .nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px 10px 20px;
+    }
+
+    .nav ul li a {
+        padding: 10px;
+        text-align: center;
+        width: 30%;
+    }
+
+    .nav ul li a:hover {
+        background-color: #0e7424;
+        color: var(--textwhite);
+        border-radius: 5px;
+    }
+
+    .content2 {
+        flex-direction: column-reverse;
+        padding: 0px 30px 30px 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 80%;
+    }
+    
+    .availability {
+        height: 118vh;
+    }
+
+    .clinichrs {
+        margin: 1.5rem 0;
+        gap: 1px;
+    }
+
+    .doc-icon {
+        position: absolute;
+        width: 100%;
+        right: 0%;
+        top: 16rem;
+    }
+
+    .other {
+        height: 135vh;
+    }
+
+    .content {
+        padding: 8rem 0;
+    }
+
+    .content h1 {
+        font-size: 3.1rem;
+    }
+
+    .content h4 {
+        font-size: 1.5rem;
+    }
+
+    .content .linya {
+        width: 80%;
+    }
+
+    .cont-tab {
+        left: 10%;
+    }
+
+    .bgmodal .title1::after {
+        width: 50%;
+        top: 3.5rem;
+        left: 25%;
+    }
+
+    .bgmodal {
+        top: 118rem;
+        width: 24rem;
+        left: 50%;
+        border-radius: 1.5rem 1.5rem 0 0;
+        transform: translate(-50%, -50%);
+    }
+    .content2 .text-content {
+        font-size: 1rem;
+    }
+
+    .bg-img img {
+        width: 30rem;
+    }
+
+    .footer .footertext::after {
+        top: 110px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+
+    .card5 {
+        width: 18rem;
+    }
+}
+
+
+
+
